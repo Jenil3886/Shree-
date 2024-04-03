@@ -6,171 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shree Ram Footwere</title>
 
-  <!-- CSS link -->
-  <link rel="stylesheet" href="./index.css">
-
-  <!-- Bootstrap link -->
-  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- JavaScript -->
+<link rel="stylesheet" href="./index.css">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
-    <script src="./index.js" defer></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+    defer></script>
+
+  <script src="./index.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Nevigation bar -->
-
   <div class="container-fluid">
     <div class="row">
-      <marquee class="marq" bgcolor="#0c78b6" direction="left" loop="">
-        <P>Get 10% instant off on prepaid orders above ₹999 or 5%
-          instant off on prepaid orders below ₹999</P>
+      <marquee class="marq" direction="left">Get 10% instant off on prepaid orders above ₹999 or 5%
+        instant off on prepaid orders below ₹999
       </marquee>
     </div>
 
-    <header class="header">
-      <img src="./public/home/shree ram.png" alt="logo" class="logo" />
-
-      <!-- <nav class="navbar">
-        <ul class="navbar-list">
-          <li><a class="navbar-link" href="#">MEN</a></li>
-          <li><a class="navbar-link" href="#">WOMEN</a></li>
-          <li><a class="navbar-link" href="#">KIDS</a></li>
-          <li><a class="navbar-link" href="#">BRANDS</a></li>
-          <li><a class="navbar-link" href="#">ABOUT US</a></li>
-          <li><a class="navbar-link" href="#">CONTECT</a></li>
-        </ul>
-      </nav> -->
-
-      <!-- <div class="mobile-navbar-btn">
-        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-      </div> -->
-
-      <div class="btn-group dropleft">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropleft
-        </button>
-        <div class="dropdown-menu">
-          <!-- Dropdown menu links -->
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>      
+    <header>
+      <img src="./public/home/shree ram.png" alt="" class="logo" />
+      <nav class="navbar">
+        <span id="new-dropdown" class="nav-btn nav-new" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">New</span>
+        <span id="men-dropdown" class="nav-btn nav-men" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Men</span>
+        <span id="women-dropdown" class="nav-btn nav-women" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Women</span>
+        <span id="kids-dropdown" class="nav-btn nav-kids" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Kids</span>
+        <span id="sale-dropdown" class="nav-btn nav-sale" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Sale</span>
+        <span id="brands-dropdown" class="nav-btn nav-brands" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Brands</span>
+      </nav>
+      <hr class="line-break1">
+      <div class="open-dropdown"></div>
     </header>
 
-
-    <!-- 
-
-     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top">
-      <div class="container-fluid">
-        <a class="navbar-brand logo" href="#"><img src="./Assets/Photos/./index/logo.png" height="60" width="130"
-            alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-
-        </button>
-        <div class="collapse navbar-collapse margin" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link home" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link men" href="#">Men</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link women" href="#">Women</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>  -->
-
-    <!-- ======================================== 
-        Our Main Hero Section Start  
-  ========================================  -->
-
-    <div class="slideshow-container-fluid">
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
-        <img src="./public/home/hero 1.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
-        <img src="./public/home/hero 2.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
-        <img src="./public/home/hero 4.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 6</div>
-        <img src="./public/home/hero 3.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 6</div>
-        <img src="./public/home/ 5.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
-        <img src="./public/home/hero 6.jpeg" style="width:100%">
-      </div>
-
+    <h1 class="row shop-by-categories">
+      SHOP BY CATEGORIES
+    </h1>
     </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <!-- 
-      <div class="container-fluid">
-        <div class="row">
-          <img src="./public/home/hero 1.jpeg" alt="">
-      </div>
-    </div> -->
-
-
-    <!-- shop by catagarys -->
-
-    <div class="row catagarys">
-      <h1><b>SHOP BY CATEGORIES</b></h1>
-    </div>
-
-    <!-- product card -->
-
-  <!-- ======================================== 
-        Our JavaScript Section Start  
-  ========================================  -->
 
 </body>
 

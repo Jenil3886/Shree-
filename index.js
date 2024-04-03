@@ -1,37 +1,138 @@
-const mobile_nav = document.querySelector(".mobile-navbar-btn");
-const nav_header = document.querySelector(".header");
+const newPanelData = [
+    {
+        title: 'Men',
+        items: ['Shoes', 'Accessories', 'Apparels'],
+    },
+    {
+        title: 'Women',
+        items: ['Shoes', 'Bags', 'Accessories', 'Apparels'],
+    },
+    {
+        title: 'Kids',
+        items: ['Shoes', 'Accessories'],
+    },
+]
 
-const toggleNavbar = () => {
-  nav_header.classList.toggle("active");
+const menPanelData = [
+    {
+        title: 'Shoes',
+        items: [
+            'Casual Shoes',
+            'Chappal & Flipflop',
+            'Formal Shoes',
+            'Loafers & Moccassin',
+            'Sandals & Floater',
+            'Sports',
+        ],
+    },
+    {
+        title: 'Apparel',
+        items: ['Joggers & Bottoms', 'Shorts', 'T-Shirt & Polos'],
+    },
+    {
+        title: 'Collections',
+        items: [
+            'Online Exclusives',
+            'Festive & Ethnic',
+            'Party-Bling',
+            '365 Closet',
+            'Workwear',
+            'Lifestyle',
+        ],
+    },
+    {
+        title: 'Brands',
+        items: [
+            'Puma',
+            'Nike',
+            'Adidas',
+            'Abross',
+            'Campus',
+            'Bata',
+            'Sparks',
+            'Liberty',
+            'Indus',
+            'TRV',
+            'Runner',
+        ],
+    },
+]
+
+const womenPanelData = []
+
+const kidsPanelData = []
+
+const salePanelData = []
+
+const brandsPanelData = []
+
+function showDropdown(elem) {
+    switch (elem.id) {
+        case 'new-dropdown':
+            showNewDropdownPanel(newPanelData)
+            break
+
+        case 'men-dropdown':
+            showNewDropdownPanel(menPanelData)
+            break
+
+        case 'women-dropdown':
+            showNewDropdownPanel(womenPanelData)
+            break
+
+        case 'kids-dropdown':
+            showNewDropdownPanel(kidsPanelData)
+            break
+
+        case 'sale-dropdown':
+            showNewDropdownPanel(salePanelData)
+            break
+
+        case 'brands-dropdown':
+            showNewDropdownPanel(brandsPanelData)
+            break
+    }
 }
 
-mobile_nav.addEventListener("click", () => toggleNavbar());
+function hideDropdown() {
+    const dropdown = document.querySelector('.open-dropdown')
 
-let slideIndex = 0;
-showSlides();
+    while (dropdown.firstChild) {
+        dropdown.removeChild(dropdown.firstChild)
+    }
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+    dropdown.style.display = 'none'
 }
 
-setTimeout(showSlides, 2000); // Change image every 2 seconds
+function showNewDropdownPanel(panelData) {
+    const dropdown = document.querySelector('.open-dropdown')
 
-// product card
+    for (let column of panelData) {
+        const dropdownList = document.createElement('div')
+        dropdownList.classList.add('dropdown-list')
 
-document.querySelectorAll('.add-to-cart').forEach(button => {
-  button.addEventListener('click', () => {
-    alert('Added to cart!');
-  });
-});
+        const dropdownListTitle = document.createElement('h3')
+        dropdownListTitle.classList.add('dropdown-list-title')
+
+        const dropdownListItems = document.createElement('div')
+        dropdownListItems.classList.add('dropdown-list-items')
+
+        dropdownListTitle.textContent = column.title
+
+        for (let item of column.items) {
+            const dropdownListItem = document.createElement('span')
+            dropdownListItem.classList.add('dropdown-list-item')
+
+            dropdownListItem.textContent = item
+
+            dropdownListItems.appendChild(dropdownListItem)
+        }
+
+        dropdownList.appendChild(dropdownListTitle)
+        dropdownList.appendChild(dropdownListItems)
+
+        dropdown.appendChild(dropdownList)
+    }
+
+    dropdown.style.display = 'flex'
+}
