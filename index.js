@@ -1,15 +1,27 @@
 const newPanelData = [
     {
         title: 'Men',
-        items: ['Shoes', 'Accessories', 'Apparels'],
+        items: [
+            'Shoes',
+            'Accessories',
+            'Apparels'
+        ],
     },
     {
         title: 'Women',
-        items: ['Shoes', 'Bags', 'Accessories', 'Apparels'],
+        items: [
+            'Shoes',
+            'Bags',
+            'Accessories',
+            'Apparels'
+        ],
     },
     {
         title: 'Kids',
-        items: ['Shoes', 'Accessories'],
+        items: [
+            'Shoes',
+            'Accessories'
+        ],
     },
 ]
 
@@ -22,12 +34,16 @@ const menPanelData = [
             'Formal Shoes',
             'Loafers & Moccassin',
             'Sandals & Floater',
-            'Sports',
+            'Sports'
         ],
     },
     {
         title: 'Apparel',
-        items: ['Joggers & Bottoms', 'Shorts', 'T-Shirt & Polos'],
+        items: [
+            'Joggers & Bottoms',
+            'Shorts',
+            'T-Shirt & Polos'
+        ],
     },
     {
         title: 'Collections',
@@ -37,7 +53,7 @@ const menPanelData = [
             'Party-Bling',
             '365 Closet',
             'Workwear',
-            'Lifestyle',
+            'Lifestyle'
         ],
     },
     {
@@ -53,18 +69,162 @@ const menPanelData = [
             'Liberty',
             'Indus',
             'TRV',
-            'Runner',
+            'Runner'
         ],
     },
 ]
 
-const womenPanelData = []
+const womenPanelData = [
+    {
+        title: 'Shoes',
+        items: [
+            'Ballerina',
+            'Casual Shoes',
+            'Chappal',
+            'Flipflop',
+            'Sandals',
+            'Sports'
+        ],
+    },
+    {
+        title: 'Heel Type',
+        items: [
+            'Block',
+            'Cone',
+            'Kitten',
+            'Platform',
+            'Stilettos',
+            'Wedges'
+        ],
+    },
+    {
+        title: 'Collections',
+        items: [
+            'Online Exclusives',
+            'Festive & Ethnic',
+            'Party-Bling',
+            '365 Closet',
+            'Workwear',
+            'Lifestyle'
+        ],
+    },
+    {
+        title: 'Brands',
+        items: [
+            'Puma',
+            'Nike',
+            'Adidas',
+            'Mochi',
+            'Inc.5',
+            'Bata',
+            'Paragon',
+            'Liberty',
+            'Catwalk',
+            'Clarks',
+            'Indus'
+        ],
+    },
+]
 
-const kidsPanelData = []
+const kidsPanelData = [
+    {
+        title: 'Featured',
+        items: [
+            'New Arrivals',
+            'Best Seller'
 
-const salePanelData = []
+        ],
+    },
+    {
+        title: 'Shoes',
+        items: [
+            'Boys',
+            'Girls',
+            'Infant',
+            'School'
+        ],
+    },
+    {
+        title: 'Brands',
+        items: [
+            'Nike',
+            'Puma',
+            'Crocs',
+            'Adidas',
+            'Abross',
+            'Campus',
+            'Bata',
+            'Sparks',
+            'Liberty'
+        ],
+    },
+]
 
-const brandsPanelData = []
+const salePanelData = [
+    {
+        title: 'Men',
+        items: [
+            'Shoes',
+            'Accessories',
+            'Apparels'
+        ],
+    },
+    {
+        title: 'Women',
+        items: [
+            'Shoes',
+            'Bags',
+            'Accessories',
+            'Apparels'
+        ],
+    },
+    {
+        title: 'Kids',
+        items: [
+            'Shoes',
+            'Accessories'
+        ],
+    },
+]
+
+const brandsPanelData = [
+    {
+        title: 'Casual Shoes',
+        items: [
+            'Nike',
+            'Puma',
+            'Adidas',
+            'Liberty',
+            'Fila',
+            'Reebok',
+            'crocs',
+            'Skechers',
+        ]
+    },
+    {
+        title: 'Formal Shoes',
+        items: [
+            'Bata',
+            'Mochi',
+            'Clarks',
+            'timberland',
+            'Woodland',
+        ]
+    },
+    {
+        title: 'Sport Shoes',
+        items:[
+            'Nike',
+            'Puma',
+            'Adidas',
+            'Sparx',
+            'Campas',
+            'Abros',
+            'Runner'
+        ]
+    }
+    
+]
 
 function showDropdown(elem) {
     switch (elem.id) {
