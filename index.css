@@ -44,9 +44,15 @@ body {
     height: 7rem;
 }
 
+.dropdown-button {
+    color: black;
+    background-color: #0c78b6;
+}
+
 .navbar-list {
+    width: 100vw;
     display: flex;
-    gap: 4.8rem;
+    
     list-style: none;
 }
 
@@ -170,7 +176,8 @@ body {
 }
 
 .mySlides {
-    display: none;
+    display: none
+    ;
 }
 
 img {
