@@ -8,13 +8,17 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/cards.css">
+  <link rel="stylesheet" href="./styles/footer.css">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
     defer></script>
 
-  <script src="./index.js" defer></script>
+  <script src="./scripts/index.js" defer></script>
+  <script src="./scripts/cards.js" defer></script>
+  <script src="./scripts/footer.js" defer></script>
 </head>
 
 <body>
@@ -29,21 +33,143 @@
     <header>
       <img src="./public/home/shree ram.png" alt="" class="logo" />
       <nav class="navbar">
-        <span id="new-dropdown" class="nav-btn nav-new" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">New</span>
-        <span id="men-dropdown" class="nav-btn nav-men" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Men</span>
-        <span id="women-dropdown" class="nav-btn nav-women" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Women</span>
-        <span id="kids-dropdown" class="nav-btn nav-kids" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Kids</span>
-        <span id="sale-dropdown" class="nav-btn nav-sale" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Sale</span>
-        <span id="brands-dropdown" class="nav-btn nav-brands" onmouseover="showDropdown(this)" onmouseout="hideDropdown()">Brands</span>
+        <span id="new-dropdown" class="nav-btn nav-new" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">New</span>
+        <span id="men-dropdown" class="nav-btn nav-men" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">Men</span>
+        <span id="women-dropdown" class="nav-btn nav-women" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">Women</span>
+        <span id="kids-dropdown" class="nav-btn nav-kids" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">Kids</span>
+        <span id="sale-dropdown" class="nav-btn nav-sale" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">Sale</span>
+        <span id="brands-dropdown" class="nav-btn nav-brands" onmouseover="showDropdown(this)"
+          onmouseout="hideDropdown()">Brands</span>
       </nav>
       <hr class="line-break1">
       <div class="open-dropdown"></div>
     </header>
 
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img class="slideshow-img" src="./public/home/hero 1.jpeg">
+      </div>
+
+      <div class="mySlides fade">
+        <img class="slideshow-img" src="./public/home/hero 2.jpeg">
+      </div>
+
+      <div class="mySlides fade">
+        <img class="slideshow-img" src="./public/home/hero 3.jpeg">
+      </div>
+
+    </div>
+    <br>
+
+    <div class="slideshow-dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
     <h1 class="row shop-by-categories">
       SHOP BY CATEGORIES
     </h1>
+    <div>
+      <section class="category-column-group">
+        <h3 id="men-btn" class="category-column-btn men-button" onclick="showDropdownCards(this)">MEN</h3>
+        <h3 id="women-btn" class="category-column-btn women-button" onclick="showDropdownCards(this)">WOMEN</h3>
+        <h3 id="kids-btn" class="category-column-btn kids-button" onclick="showDropdownCards(this)">KIDS</h3>
+      </section>
+      <section class="product-image-section">
+        <div class="product-image-group">
+          <div class="product-card">
+            <div class="product-card-image"><img id="card-img1" src="./public/men/download.jpeg" alt=""></div>
+            <div>
+              <h3 id="card-title1" class="product-card-title">Flip- Flops</h3>
+              <p id="card-description1" class="product-card-description">Put your best foot forward with these flip flops</p>
+              <p id="card-button1" class="product-card-button">Shop Flip-Flops</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img id="card-img2" src="./public/men/images (1).jpeg" alt="">
+            </div>
+            <div>
+              <h3 id="card-title2" class="product-card-title">Flip- Flops</h3>
+              <p id="card-description2" class="product-card-description">Put your best foot forward with these flip flops</p>
+              <p id="card-button2" class="product-card-button">Shop Flip-Flops</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img id="card-img3" src="./public/men/images (4).jpeg" alt=""></div>
+            <div>
+              <h3 id="card-title3" class="product-card-title">Flip- Flops</h3>
+              <p id="card-description3" class="product-card-description">Put your best foot forward with these flip flops</p>
+              <p id="card-button3" class="product-card-button">Shop Flip-Flops</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img id="card-img4" src="./public/men/images (6).jpeg" alt=""></div>
+            <div>
+              <h3 id="card-title4" class="product-card-title">Flip- Flops</h3>
+              <p id="card-description4" class="product-card-description">Put your best foot forward with these flip flops</p>
+              <p id="card-button4" class="product-card-button">Shop Flip-Flops</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <footer>
+      <div class="footer1">
+        <div class="footer-column">
+          <p class="footer-column-title">LET US HELP YOU</p>
+          <p>Contact Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+          <p>Check / Return Order</p>
+        </div>
+
+        <div class="footer-column">
+          <p class="footer-column-title">USEFUL LINKS
+          <p>Terms and Conditions</p>
+          <p>Connect with us on WhatsApp</p>
+          <p>Invite Bata Store On Wheels</p>
+          <p>Become Our Partner</p>
+          <p>COVID Safety Guidelines</p>
+        </div>
+
+        <div class="footer-column">
+          <p class="footer-column-title">COMPANY</p>
+          <p>About Us</p>
+          <p>BATA Worldwide</p>
+          <p>The Bata Company</p>
+          <p>Press Release</p>
+          <p>CSR</p>
+          <p>Awards & Recognition</p>
+          <p>Whistle Blow Policy</p>
+          <p>POSH Policy</p>
+          <p>Investor Relationss</p>
+        </div>
+
+        <div class="footer-column">
+          <p class="footer-column-title">FOLLOW US</p>
+          <img class="social-media-icons" src="./public/home/instagram.png" alt="">
+          <img class="social-media-icons" src="./public/home/facebook.png" alt="">
+          <img class="social-media-icons" src="./public/home/youtube.png" alt="">
+          <img class="social-media-icons" src="./public/home/linkedin.png" alt="">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer2">
+        <p>© 2024 SHREE RAM FOOTWERE</p>
+      </div>
+
+    </footer>
+  </div>
 
 </body>
 
