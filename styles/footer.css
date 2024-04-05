@@ -82,3 +82,7 @@ footer {
 .social-media-icons {
   width: 30px;
 }
+
+.social-media-icons:hover {
+  cursor: pointer;
+}
