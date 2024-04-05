@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/index.css">
   <link rel="stylesheet" href="./styles/cards.css">
   <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/content.css">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
@@ -19,6 +20,7 @@
   <script src="./scripts/index.js" defer></script>
   <script src="./scripts/cards.js" defer></script>
   <script src="./scripts/footer.js" defer></script>
+  <script src="./scripts//content.js" defer></script>
 </head>
 
 <body>
@@ -33,89 +35,119 @@
     <header>
       <img src="./public/home/shree ram.png" alt="" class="logo" />
       <nav class="navbar">
-        <span id="new-dropdown" class="nav-btn nav-new" onmouseover="showDropdown(this)">New</span>
-        <span id="men-dropdown" class="nav-btn nav-men" onmouseover="showDropdown(this)">Men</span>
-        <span id="women-dropdown" class="nav-btn nav-women" onmouseover="showDropdown(this)">Women</span>
-        <span id="kids-dropdown" class="nav-btn nav-kids" onmouseover="showDropdown(this)">Kids</span>
-        <span id="sale-dropdown" class="nav-btn nav-sale" onmouseover="showDropdown(this)">Sale</span>
-        <span id="brands-dropdown" class="nav-btn nav-brands" onmouseover="showDropdown(this)">Brands</span>
+        <span id="new" class="nav-btn nav-new" onmouseover="showDropdown(this)" onclick="showContent(this)">New</span>
+        <span id="men" class="nav-btn nav-men" onmouseover="showDropdown(this)" onclick="showContent(this)">Men</span>
+        <span id="women" class="nav-btn nav-women" onmouseover="showDropdown(this)"
+          onclick="showContent(this)">Women</span>
+        <span id="kids" class="nav-btn nav-kids" onmouseover="showDropdown(this)"
+          onclick="showContent(this)">Kids</span>
+        <span id="sale" class="nav-btn nav-sale" onmouseover="showDropdown(this)"
+          onclick="showContent(this)">Sale</span>
+        <span id="brands" class="nav-btn nav-brands" onmouseover="showDropdown(this)"
+          onclick="showContent(this)">Brands</span>
       </nav>
       <div class="open-dropdown" onmouseover="visibleDropdown()" onmouseout="hideDropdown()"></div>
     </header>
 
-    <div class="slideshow-container">
+    <div class="home-content">
+      <div class="slideshow-container">
 
-      <div class="mySlides fade">
-        <img class="slideshow-img" src="./public/home/hero 1.jpeg">
-      </div>
-
-      <div class="mySlides fade">
-        <img class="slideshow-img" src="./public/home/hero 2.jpeg">
-      </div>
-
-      <div class="mySlides fade">
-        <img class="slideshow-img" src="./public/home/hero 3.jpeg">
-      </div>
-
-    </div>
-    <br>
-
-    <div class="slideshow-dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <h1 class="row shop-by-categories">
-      SHOP BY CATEGORIES
-    </h1>
-    <div>
-      <section class="category-column-group">
-        <h3 id="men-btn" class="category-column-btn men-button" onclick="showDropdownCards(this)">MEN</h3>
-        <h3 id="women-btn" class="category-column-btn women-button" onclick="showDropdownCards(this)">WOMEN</h3>
-        <h3 id="kids-btn" class="category-column-btn kids-button" onclick="showDropdownCards(this)">KIDS</h3>
-      </section>
-      <section class="product-image-section">
-        <div class="product-image-group">
-          <div class="product-card">
-            <div class="product-card-image"><img id="card-img1" src="./public/men/download.jpeg" alt=""></div>
-            <div>
-              <h3 id="card-title1" class="product-card-title">Flip- Flops</h3>
-              <p id="card-description1" class="product-card-description">Put your best foot forward with these flip
-                flops</p>
-              <p id="card-button1" class="product-card-button">Shop Flip-Flops</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-image"><img id="card-img2" src="./public/men/images (1).jpeg" alt="">
-            </div>
-            <div>
-              <h3 id="card-title2" class="product-card-title">Flip- Flops</h3>
-              <p id="card-description2" class="product-card-description">Put your best foot forward with these flip
-                flops</p>
-              <p id="card-button2" class="product-card-button">Shop Flip-Flops</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-image"><img id="card-img3" src="./public/men/images (4).jpeg" alt=""></div>
-            <div>
-              <h3 id="card-title3" class="product-card-title">Flip- Flops</h3>
-              <p id="card-description3" class="product-card-description">Put your best foot forward with these flip
-                flops</p>
-              <p id="card-button3" class="product-card-button">Shop Flip-Flops</p>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="product-card-image"><img id="card-img4" src="./public/men/images (6).jpeg" alt=""></div>
-            <div>
-              <h3 id="card-title4" class="product-card-title">Flip- Flops</h3>
-              <p id="card-description4" class="product-card-description">Put your best foot forward with these flip
-                flops</p>
-              <p id="card-button4" class="product-card-button">Shop Flip-Flops</p>
-            </div>
-          </div>
+        <div class="mySlides">
+          <img class="slideshow-img" src="./public/home/hero 1.jpeg">
         </div>
-      </section>
+
+        <div class="mySlides">
+          <img class="slideshow-img" src="./public/home/hero 2.jpeg">
+        </div>
+
+        <div class="mySlides">
+          <img class="slideshow-img" src="./public/home/hero 3.jpeg">
+        </div>
+
+      </div>
+      <br>
+
+      <div class="slideshow-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <h1 class="row shop-by-categories">
+        SHOP BY CATEGORIES
+      </h1>
+      <div>
+        <section class="category-column-group">
+          <h3 id="men-btn" class="category-column-btn men-button" onclick="showDropdownCards(this)">MEN</h3>
+          <h3 id="women-btn" class="category-column-btn women-button" onclick="showDropdownCards(this)">WOMEN</h3>
+          <h3 id="kids-btn" class="category-column-btn kids-button" onclick="showDropdownCards(this)">KIDS</h3>
+        </section>
+        <section class="product-image-section">
+          <div class="product-image-group">
+            <div class="product-card">
+              <div class="product-card-image"><img id="card-img1" src="./public/men/download.jpeg" alt=""></div>
+              <div>
+                <h3 id="card-title1" class="product-card-title">Flip- Flops</h3>
+                <p id="card-description1" class="product-card-description">Put your best foot forward with these flip
+                  flops</p>
+                <p id="card-button1" class="product-card-button">Shop Flip-Flops</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image"><img id="card-img2" src="./public/men/images (1).jpeg" alt="">
+              </div>
+              <div>
+                <h3 id="card-title2" class="product-card-title">Flip- Flops</h3>
+                <p id="card-description2" class="product-card-description">Put your best foot forward with these flip
+                  flops</p>
+                <p id="card-button2" class="product-card-button">Shop Flip-Flops</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image"><img id="card-img3" src="./public/men/images (4).jpeg" alt=""></div>
+              <div>
+                <h3 id="card-title3" class="product-card-title">Flip- Flops</h3>
+                <p id="card-description3" class="product-card-description">Put your best foot forward with these flip
+                  flops</p>
+                <p id="card-button3" class="product-card-button">Shop Flip-Flops</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image"><img id="card-img4" src="./public/men/images (6).jpeg" alt=""></div>
+              <div>
+                <h3 id="card-title4" class="product-card-title">Flip- Flops</h3>
+                <p id="card-description4" class="product-card-description">Put your best foot forward with these flip
+                  flops</p>
+                <p id="card-button4" class="product-card-button">Shop Flip-Flops</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="new-content">
+      <h1 style="text-align: center;">I am men content</h1>
+    </div>
+
+    <div class="men-content">
+      <h1 style="text-align: center;">I am men content</h1>
+    </div>
+
+    <div class="women-content">
+      <h1 style="text-align: center;">I am women content</h1>
+    </div>
+
+    <div class="kids-content">
+      <h1 style="text-align: center;">I am kids content</h1>
+    </div>
+
+    <div class="sale-content">
+      <h1 style="text-align: center;">I am men content</h1>
+    </div>
+
+    <div class="brands-content">
+      <h1 style="text-align: center;">I am brands content</h1>
     </div>
 
     <footer>

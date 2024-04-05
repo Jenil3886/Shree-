@@ -169,27 +169,27 @@ const brandsPanelData = [
 
 function showDropdown(elem) {
   switch (elem.id) {
-    case 'new-dropdown':
+    case 'new':
       showNewDropdownPanel(newPanelData)
       break
 
-    case 'men-dropdown':
+    case 'men':
       showNewDropdownPanel(menPanelData)
       break
 
-    case 'women-dropdown':
+    case 'women':
       showNewDropdownPanel(womenPanelData)
       break
 
-    case 'kids-dropdown':
+    case 'kids':
       showNewDropdownPanel(kidsPanelData)
       break
 
-    case 'sale-dropdown':
+    case 'sale':
       showNewDropdownPanel(salePanelData)
       break
 
-    case 'brands-dropdown':
+    case 'brands':
       showNewDropdownPanel(brandsPanelData)
       break
   }
