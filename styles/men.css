@@ -1,0 +1,141 @@
+/* Typography */
+body,
+ul,
+li,
+p,
+a,
+label,
+input,
+div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px !important;
+}
+
+/* General */
+
+.text-muted {
+  color: #bcbcbc !important;
+}
+
+.text-light {
+  color: #cfd6e1 !important;
+}
+
+.bg-dark {
+  background-color: #212934 !important;
+}
+
+.bg-light {
+  background-color: #e9eef5 !important;
+}
+
+.bg-black {
+  background-color: #1d242d !important;
+}
+
+.side-nev-types{
+  padding: 1rem 0;
+}
+
+:hover.side-nev-types{
+  color: #0c78b6;
+  transition-duration: 0.2s;
+}
+
+.pagination .page-link:hover {
+  color: #000;
+}
+
+.templatemo-accordion a {
+  color: #000;
+}
+
+.templatemo-accordion a:hover {
+  color: #333d4a;
+}
+
+
+.card.product-wap .card .product-overlay {
+  background: rgba(0, 0, 0, .2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.card.product-wap:hover .card .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card.product-wap a {
+  color: #000;
+}
+
+.brand-img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.brand-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.tempaltemo-carousel .h1 {
+  font-size: .5em !important;
+  color: #000 !important;
+}
+
+.form-control {
+  border: 1px solid #e8e8e8;
+}
+
+.product-wap .h3,
+.product-wap li,
+.product-wap i,
+.product-wap p {
+  font-size: 12px !important;
+}
+
+.product-wap .product-color-dot {
+  width: 6px;
+  height: 6px;
+}
+
+@media (min-width: 576px) {
+  .tempaltemo-carousel .h1 {
+    font-size: 1em !important;
+  }
+
+  .carousel-item {
+    min-height: 9rem !important;
+  }
+
+  .product-wap .h3,
+  .product-wap li,
+  .product-wap i,
+  .product-wap p {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 1200px) {}
